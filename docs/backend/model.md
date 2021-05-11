@@ -8,7 +8,7 @@ app
 |-- ...
 ```
 
-The model defines the object of the data from the database. All the table/ data from the database will be firstly migrated as the Model and then apply changes, display and more further action in the Controller. All the model should have a one to one relationship to the corresponding table in the table.
+The model defines the object of the data from the database. All the table/data from the database will be firstly migrated as the Model and then apply changes, display and more further action in the Controller. All the model should have a one-to-one relationship to the corresponding table in the table.
 
 <details>
   <summary>Click to expand!</summary>
@@ -137,7 +137,7 @@ class Component extends Model
 </p>
 </details>
 
-The above code is the example explaining how the model works. The ```protected $table = 'component'; ``` is the key command of a model which defines the model is connecting to which table in the database. The laravel model extension will directed transfer the properties from the database table to the model. Besides the basic defination of the model, it is needed to define the relation which means what is the relationship between this model and other models. The relationship can be one to one relationship, parent-childern relationship, one to many relationship, many to many relationship and etc. For example: 
+The above code is an example explaining how the model works. The ```protected $table = 'component'; ``` is the key command of a model which defines how the model is connecting to which table in the database. The Laravel model extension will directed transfer the properties from the database table to the model. Besides the basic defination of the model, it is needed to define the relation which means what is the relationship between this model and other models. The relationship can be one-to-one relationship, parent-childern relationship, one-to-many relationship, many-to-many relationship and etc. For example: 
 ``` php
   public function dpid(){
         return $this->hasMany(
@@ -146,7 +146,7 @@ The above code is the example explaining how the model works. The ```protected $
         )->where('is_deleted', 0);
     }
 ```
-describes the component has many dpid meaning the one to many relationship.
+describes the component has many dpid meaning the one-to-many relationship.
 
 Please visit [Relationship](https://laravel.com/docs/6.x/eloquent-relationships) to find out more. 
 

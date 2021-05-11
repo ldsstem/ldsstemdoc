@@ -1,8 +1,8 @@
-## License
+# License
 MIT License
 
 
-## Requirements:
+# Requirements:
 
 For example if your server distro is Ubuntu 20.04, you need to install the following items first
 
@@ -30,10 +30,10 @@ Install the following packages for Laravel/Composer:
 (Tip for Mac computer: you can install [Homebrew](https://brew.sh/) first and use it to install the required package. PLease note that the path are not the same as Ubuntu 20.04)
 
 
-## Installation Steps
+# Installation Steps
 
 
-# Basic Steps
+## Basic Steps
 
 To begin with, please clone this repository to your local machine from the git
 
@@ -75,10 +75,10 @@ Run the npm build to apply the latest front code changes.
 ```npm run prod``` or ```npm run dev``` for dev build
 
 
-# LDS on the server
+## LDS on the server
 LDS can be served on the NGINX Server.
 
-copy it to your WWW folder for production build, or put it anywhere and set it in NGINX server block congif
+Copy it to your WWW folder for production build, or put it anywhere and set it in NGINX server block configuration.
 ``` cp ldsk12_beta -rf /var/www ```
 
 Set the NGINX server block for the LDS site, for example:
@@ -141,7 +141,7 @@ At this point you may want to restart NGINX to apply any changes that is not loa
 
 
 
-# Local Development
+## Local Development
 
 Besides, if you would like to develop in your own local enivironment
 
@@ -160,4 +160,25 @@ Serve LDS in your local machine via Laravel
 ``` php artisan serve ```
 
 
-Enjoy your coding.
+# Handle version changes
+For each deployment to the production server, the version variable ```app_ver``` should be increased in the file ```config/app.php```. This also affected some Blade templates under ```resources/views/```, particularly make the loading of ```app.js``` depends on the version by this line:
+
+```script.src = "/js/app.js?v=" + version;```
+
+Please adjust it in your dev envirnoment if necessary when you find that JS does't update, but you may need to do a force/hard reload or clear cached files on your browser.
+
+The following commands should be run for version upgrade with PHP/DB/JS changes (run all of them should have no negative effect):
+
+```composer install```
+
+```php artisan cache:clear```
+
+```php artisan migrate```
+
+```npm install```
+
+```npm run prod```
+
+Some features (e.g. Evidence on v2.3.5) might require web server to create folder and save file (uploaded by user on web) in the ```public\asset``` folder or its sub-folders, therefore you should run ```chown``` and/or ```chmod``` accordingly if you encounter problem like "500 internal server error" because of permission denied.
+
+If there is still problem, by default Laravel would store logs at ```storage/logs/laravel.log``` and have detail stack trace.

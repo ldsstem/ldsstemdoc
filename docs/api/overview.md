@@ -1,18 +1,19 @@
 # API Overview
 
-In this section, we will talk about the structure on the api service. Also, we will provide some api request, and its response as the example. 
+In this section, we will talk about the structure on the API service. Also, we will provide some API request, and its response as the example. 
 
-First, the laravel routes the api endpoint in ``` routes/api.php ``` and mostly the corresponding API controller ``` app/HTTP/Controller/API/* ``` will do the correspinding handling logic for incoming RESTapi request. For more details, you might go to [Resource Controller](https://laravel.com/docs/6.x/controllers#resource-controllers).
+First, the Laravel routes the API endpoint in ``` routes/api.php ``` and mostly the corresponding API controller ``` app/HTTP/Controller/API/* ``` will do the correspinding handling logic for incoming RESTful API request. For more details, you might go to [Resource Controller](https://laravel.com/docs/6.x/controllers#resource-controllers).
 
 
-# How to build a API CONTROLLER
+# How to build an API Controller
 
-In the remaining part, I would teach you how to build a brand new RESTful API service from strach. There are two key elements to build a api service and they are: Controller, Routes.
+In the remaining part, I would teach you how to build a brand new RESTful API service from scratch. There are two key elements to build an API service and they are: **Controller** and **Routes**.
 
-To start with, we need to build a api Controller.
-``` php artisan make:Controller API/TestController --api ```
+To start with, we need to build an API Controller by running:
 
-The laravel framework will generate the api Controller like 
+```php artisan make:Controller API/TestController --api```
+
+The laravel framework will generate the API Controller file like 
 ```
 <?php
 
@@ -85,9 +86,11 @@ class TestController extends Controller
     }
 }
 ```
-Please fill in the corresponding logic as index(LIST), store(POST), show(GET), update(PUT) and destroy(DELETE)
+Please fill in the corresponding logic as index(LIST), store(POST), show(GET), update(PUT) and destroy(DELETE).
 
 And then you might open the ``` routes/api.php ``` and add ```Route::resource('test', 'API\TestController');``` in order to routes the endpoint to the controller you just created.
+
+Below is a list of endpoints we created in this example.
 
 verb | endpoint | action
 --- | --- | ---

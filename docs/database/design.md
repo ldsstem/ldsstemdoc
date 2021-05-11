@@ -4,7 +4,7 @@
     <img width="180px" style="width: 80%" bor src="./image/course_1.png">
 </a>
 
-> The diagram above simply shows the structure of a learning design. A Learning Design is generally form by three parts, the course itself, curriculum components and the learning outcome. Each part is also associate with each other.
+> The diagram above simply shows the structure of a learning design. A Learning Design is generally form by three parts, the course itself, curriculum components and the learning outcomes. Each part is also associated with each other.
 
 * course: Store the basic infomation of a course/ learning design. One course can have one or more curriculum component(s), learning outcome(s) and evidence
 * course_outcome_relation: Identify the course can achieve which learning outcomes.

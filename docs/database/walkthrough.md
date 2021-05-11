@@ -3,7 +3,7 @@
 ### Scenario
 Add the two 
 
-First, we need to create a migration file to make the database changes in next migration. We can create the file through the laravel commond.
+First, we need to create a migration file to make the database changes in next migration. We can create the file through the Laravel commond.
 
 ``` php artisan make:migration add_column_preposttiem_lesson ```
 
@@ -52,9 +52,9 @@ class AddColumnPreposttiemLesson extends Migration
 
 Run the laravel command  ``` php artisan migrate ``` To execute the migration.
 
-And now, we will have a lesson table with two new extra column.
+And now, we will have a lesson table with two new extra columns.
 
-Furthermore, to apply this database changes on the api, open the ```app/HTTP/Controller/API/LessonAPIController.php```. Please add 
+Furthermore, to apply this database changes on the API, open the ```app/HTTP/Controller/API/LessonAPIController.php```. Please add 
 ```
   public static function save(Lesson $lesson, Request $request){
         ...

@@ -1,6 +1,6 @@
 # Overview
 
-LDS is a user interactive web application mainly using [ReactJS](https://reactjs.org/). For the user interface, it is using [Material UI](https://material-ui.com/) as the framework and using api request to make communication with the backend api serivce. It is also using many react plugin library. Please check the following list for more details:
+LDS is a user interactive web application mainly using [ReactJS](https://reactjs.org/). For the user interface, it is using [Material UI](https://material-ui.com/) as the framework and using api request to make communication with the backend API serivce. It is also using many React plugin library. Please check the following list for more details:
 
 * [axios](https://github.com/axios/axios): handle api request and receiving response
 * [react-chartjs-2](https://github.com/reactchartjs/react-chartjs-2): dashboard chart

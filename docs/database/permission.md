@@ -4,7 +4,7 @@
     <img width="180px" style="width: 80%" bor src="./image/permission_1.png">
 </a>
 
-> Permission is a set of table to controll which design can be edited/ viewed/ deleted. 
+> Permission is a set of tables to control which design can be edited/ viewed/ deleted. 
 
 * usergroup_course_relation: if the LD has usergroup permission, the record would be stored in this table.
 * design_course_relation: if the LD has usergroup permission, the record would be stored in this table.

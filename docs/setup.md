@@ -1,3 +1,0 @@
-# Setup
-
-> An awesome project.

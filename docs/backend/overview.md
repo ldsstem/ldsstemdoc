@@ -1,6 +1,6 @@
 # Overview
 
-The LDSK12_beta is using the laravel framework to provide backend service, mainly the database migration and RESTful Api. The following items is the section/ technologies we are using in the LDSK12_beta.
+The LDSK12_beta is using the Laravel framework to provide backend services, mainly the database migration and RESTful API. The following items rae the sections/technologies we are using in the LDSK12_beta.
 
 [Configuration](https://laravel.com/docs/6.x/configuration)
 
@@ -12,4 +12,4 @@ The LDSK12_beta is using the laravel framework to provide backend service, mainl
 
 [Laravel Passport](https://laravel.com/docs/6.x/passport#introduction)
 
-are also integrated to this API service.
+are all integrated to this API service.

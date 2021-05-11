@@ -62,4 +62,4 @@
 </script>
 ```
 
-The code above shows the sample of app.view . The code generate a div called appcontainer and passed the data to the div. Then, the app.js in the React part will search the html id called appcontainer and generate the react app container for building the web application. 
+The code above shows the sample of ```app.view``` . The code generate a div called appcontainer and passed the data to the div. Then, the ```app.js``` in the React part will search the html id called appcontainer and generate the react app container for building the web application. 

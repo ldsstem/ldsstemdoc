@@ -2,7 +2,6 @@
 
 ## INDEX
 
-
 Response
 <details>
   <summary>Click to expand!</summary>
