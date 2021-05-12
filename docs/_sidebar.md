@@ -1,6 +1,5 @@
 - Getting started
     - [Quick start](quickstart.md)
-    - [Other Notes](quickstart.md)
 
 - Backend
     - [Overview](backend/overview.md)
@@ -19,7 +18,6 @@
     - [Evidence](database/evidence.md)
     - [Template](database/template.md)
     - [Permission](database/permission.md)
-  
 
 - API
     - [Overview](api/overview.md)
