@@ -1,7 +1,8 @@
 # WalkThrough
 
 ### Scenario
-Add the two 
+
+Add the two new columns, both are integer, ```pre_time``` and ```post_time``` to the Lesson table.
 
 First, we need to create a migration file to make the database changes in next migration. We can create the file through the Laravel commond.
 
