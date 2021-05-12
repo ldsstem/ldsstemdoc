@@ -22,6 +22,7 @@
 - API
     - [Overview](api/overview.md)
     - [Course](api/course.md)
+    - ...docs to be completed
 
 - Frontend
     - [Overview](frontend/overview.md)
