@@ -1,3 +1,8 @@
+- To Be Finished
+    - [Add a feature to design view](tbf/addfeature.md)
+    - [Real-time Data Sync](tbf/realtime.md)
+    - [Template Module](tbf/template.md)
+
 - Getting started
     - [Quick start](quickstart.md)
 
@@ -30,8 +35,3 @@
     - [Admin Module](frontend/admin.md)
     - [Design Studio](frontend/designstudio.md)
     - [User Group](frontend/usergroup.md)
-
-- To Be Finished
-    - [Real-time Data Sync](tbf/realtime.md)
-    - [Template Module](tbf/template.md)
-    - [Add a feature to design view](tbf/addfeature.md)
