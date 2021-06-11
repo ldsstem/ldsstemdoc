@@ -34,3 +34,4 @@
 - To Be Finished
     - [Real-time Data Sync](tbf/realtime.md)
     - [Template Module](tbf/template.md)
+    - [Add a feature to design view](tbf/addfeature.md)
