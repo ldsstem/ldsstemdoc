@@ -7,7 +7,7 @@
     - All UI postions and CSS style should be normal, and the Timeline should display properly on the right space like all other features, e.g. won't wrap under the left menu, won't display something outside of the viewport
 2. Check permission of user and display timeline accordingly (currently edit mode or view-only mode).
     - Actually the course object returned by ```GET /course/{id}``` already contain the ```permission``` parameter inside.
-    - By importing the main container (```designContainer```), you can also reuse all the global state, date and built-in funtion. Simply by using React hook ```React.useContext()``` in a function you can access the ``` course.``` object with ```permission``` parameter.
+    - By importing the main container (```designContainer```), you can also reuse all the global state, date and built-in funtion. Simply by using React hook ```React.useContext()``` in a function, then you can access the ```course``` object with ```permission``` parameter inside.
     - For frontend JSX code, you can use the ```permission``` parameter to make condition so that those add/edit/delete icons are not shown.
     - For backend API, PUT/POST/DELETE request to ```\course```, ```\lesson```, ```\learningTask```, etc are protected already.
   3. (Deeper integration) Reuse components like the task setting form in the dialog
