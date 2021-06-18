@@ -1,5 +1,6 @@
 - To Be Finished
     - [Add a feature to design view](tbf/addfeature.md)
+    - [Timeline Integration](tbf/timelineintegration)
     - [Real-time Data Sync](tbf/realtime.md)
     - [Template Module](tbf/template.md)
 
