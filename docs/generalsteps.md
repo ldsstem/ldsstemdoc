@@ -1,5 +1,7 @@
 # General steps for new API setup from backend to frontend
 
+{docsify-updated}
+
 The following are just oversimplied instructions, please also studying the LDS source code carefully and refer to the detail documentation.
 
 ## 1. Modifying database
@@ -20,15 +22,15 @@ Create a new model (using [Eloquent ORM](https://laravel.com/docs/6.x/eloquent))
 
 ```php artisan make:model ModelName```
 
-Inside the file, this line defined how the model is connecting to a table with the given name explicitly.
+Inside the file, this line defined how the model is connecting to a database table with the given name explicitly.
 
 ```protected $table = 'table_name';```
 
-Besides the basic defination, it is needed to define the [relationship](https://laravel.com/docs/6.x/eloquent-relationships) between this model and other models.
+Besides the basic definition, we also need to define the [relationship](https://laravel.com/docs/6.x/eloquent-relationships) between this model and other models.
 
-The relationship can be one-to-one relationship, parent-childern relationship, one-to-many relationship, many-to-many relationship and etc.
+The relationship can be one-to-one relationship, parent-childern relationship, one-to-many relationship, many-to-many relationship and etc. This facilitate easy retrival and manipulation of associated models.
 
-The ```self::deleting()``` function can also be overrided for special handling under ```boot()'''.
+The ```self::deleting()``` function can also be overrided for special handling under ```boot()``` if just deleting a record from the table is not enough.
 
 ### 2.2. Controller
 
