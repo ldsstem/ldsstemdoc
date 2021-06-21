@@ -6,6 +6,7 @@
 
 - Getting started
     - [Quick start](quickstart.md)
+    - [Steps for adding API](generalsteps.md)
 
 - Backend
     - [Overview](backend/overview.md)
