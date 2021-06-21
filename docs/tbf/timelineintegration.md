@@ -10,4 +10,6 @@
     - By importing the main container (```designContainer```), you can also reuse all the global state, date and built-in funtion. Simply by using React hook ```React.useContext()``` in a function, then you can access the ```course``` object with ```permission``` parameter inside.
     - For frontend JSX code, you can use the ```permission``` parameter to make condition so that those add/edit/delete icons are not shown.
     - For backend API, PUT/POST/DELETE request to ```\course```, ```\lesson```, ```\learningTask```, etc are protected already.
-  3. (Deeper integration) Reuse components like the task setting form in the dialog
+3. (Deeper integration) Reuse components like the task setting form in the dialog
+
+> **Remark:** Since timeline is using Redux, its code is different from other features in LDS, you may need to adapt the above explanation differently since there are state and reducer to deal with.
