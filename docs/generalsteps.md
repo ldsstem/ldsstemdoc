@@ -1,20 +1,20 @@
 # General steps for new API setup from backend to frontend
 
-The following are just heavily simplied instructions, please also studying the LDS source code carefully and refer to the detail documentation.
+The following are just oversimplied instructions, please also studying the LDS source code carefully and refer to the detail documentation.
 
-## Modifying database
+## 1. Modifying database
 
-Create a migration file through the Laravel command:
+Create a migration file using the Laravel command:
 
 ```php artisan make:migration describe_the_change```
 
-Edit this file at ```database/migration```, mainly the ```up()``` and ```down()``` methods.
+Edit this new file under ```/database/migrations```, mainly the ```up()``` and ```down()``` methods.
 
-Run ```php artisan migrate``` To execute the migration.
+Run ```php artisan migrate``` to execute the migration.
 
-## Backend setup after adding a new DB table
+## 2. Backend setup after adding a new DB table
 
-### Model
+### 2.1. Model
 
 Create a new model (using [Eloquent ORM](https://laravel.com/docs/6.x/eloquent)), under ```/app```, which have a one-to-one relationship to the corresponding table.
 
@@ -30,7 +30,7 @@ The relationship can be one-to-one relationship, parent-childern relationship, o
 
 The ```self::deleting()``` function can also be overrided for special handling under ```boot()'''.
 
-### Controller
+### 2.2. Controller
 
 Create a new API controller by:
 
@@ -42,7 +42,7 @@ Please fill in the corresponding logic (map to HTTP requests) as index(LIST), st
 
 For other special request, e.g. not just directly add/update/delete the default data object, you may add extra functions which can be called by special route later.
 
-### Route
+### 2.3. Route
 
 Open ```routes/api.php``` and add this line to create the route (created ```/api/test``` in this case):
 
@@ -52,9 +52,9 @@ Put it inside ```Route::middleware(['auth:api'])->group(function () {})``` to ma
 
 Further permission handling also handled by two other middleware ```admin_auth``` and ```design_permission```, both can be found under ```/app/Http/Middleware```.
 
-> For web display related APIs and their routes, refer to ```routes/api.php```
+> For web display related APIs and their routes, refer to ```routes/web.php```
 
-## Frontend API definition
+## 3. Frontend API definition
 
 Finally all APIs should be defined at ```/resources/js/api.js```. It just simply use ```axios``` as HTTP client to send different requests to the endpoints, with a unique name given to each single request. For example:
 
@@ -87,7 +87,7 @@ Then inside the React JSX file, these APIs can be imported like this:
 
 And typical be called like:
 
-```
+```js
 await apiCourseUpdate({
 
 }).then(response => {
