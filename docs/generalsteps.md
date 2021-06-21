@@ -10,7 +10,7 @@ Create a migration file using the Laravel command:
 
 ```php artisan make:migration describe_the_change```
 
-Edit this new file under ```/database/migrations```, mainly the ```up()``` and ```down()``` methods.
+Edit this new file under ```/database/migrations```, mainly the ```up()``` and ```down()``` methods. Study more about [Laravel database migration](https://laravel.com/docs/6.x/migrations).
 
 Run ```php artisan migrate``` to execute the migration.
 
