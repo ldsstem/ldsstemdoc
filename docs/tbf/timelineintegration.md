@@ -1,6 +1,7 @@
 # Timeline Integration
 
 ### List of requirements
+
 1. Display timeline in the same interface as the main app
     - Since it is not just go to another page in a new tab, no more getting course id from URL, but it can be retrieved by ```import {ContextStore} from '../../../container/designContainer'```, and get the current active course
     - Once user click on the Timeline on the left menu, it display on the right hand side, i.e. display the ```<TimelineContainer />```
@@ -13,3 +14,22 @@
 3. (Deeper integration) Reuse components like the task setting form in the dialog
 
 > **Remark:** Since timeline is using Redux, its code is different from other features in LDS, you may need to adapt the above explanation differently since there are state and reducer to deal with.
+
+### LDS nodejs_v14 branch
+This branch is created to make LDS frontend compatible with the latest Node.jd LTS version lts/fermium v14.17.1.
+
+All dependencie have been updated, and scripts are updated to use Laravel-Mix 6 standard format. There are still some problematic packages but there should be no error during code compile. All these 3 modes are tested and worked fine:
+
+```bash
+npm run dev
+npm run watch
+npm run prod
+```
+
+It is recommended to use [nvm](https://github.com/nvm-sh/nvm) to manage different version of node.js. Let say you need to recompile the JS code from an older version:
+
+```bash
+nvm use v.14.17.1
+npm install
+npm run dev
+```
