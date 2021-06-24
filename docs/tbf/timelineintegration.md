@@ -16,7 +16,7 @@
 > **Remark:** Since timeline is using Redux, its code is different from other features in LDS, you may need to adapt the above explanation differently since there are state and reducer to deal with.
 
 ### LDS nodejs_v14 branch
-This branch is created to make LDS frontend compatible with the latest Node.jd LTS version lts/fermium v14.17.1.
+This branch ([nodejs_v14](https://github.com/ldsstem/nodejs_v14/tree/Dev)) is created to make LDS frontend compatible with the latest Node.jd LTS version lts/fermium v14.17.1. If no problem is found from both team, it may be merged into the main branches.
 
 All dependencie have been updated, and scripts are updated to use Laravel-Mix 6 standard format. There are still some problematic packages but there should be no error during code compile. All these 3 modes are tested and worked fine:
 
