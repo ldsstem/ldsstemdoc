@@ -3,7 +3,7 @@
 ### List of requirements
 
 1. Display timeline in the same interface as the main app
-    - Since it is not just go to another page in a new tab, no more getting course id from URL, but it can be retrieved by ```import {ContextStore} from '../../../container/designContainer'```, and get the current active course
+    - Since it is not just go to another page in a new tab, no more getting course id from URL using ```window.location.href```, but the current active course object can be retrieved by ```import {ContextStore} from '../../../container/designContainer'```. You will also need to ```import React from 'react'``` and call the ```React.useContext()``` method; This way of accessing app data is widly use in most of the components so you can just study the code, e.g. ```resources/js/design/lesson/container/lessonPlanContainer.jsx```
     - Once user click on the Timeline on the left menu, it display on the right hand side, i.e. display the ```<TimelineContainer />```
     - All UI postions and CSS style should be normal, and the Timeline should display properly on the right space like all other features, e.g. won't wrap under the left menu, won't display something outside of the viewport
 2. Check permission of user and display timeline accordingly (currently edit mode or view-only mode).
