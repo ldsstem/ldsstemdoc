@@ -4,8 +4,10 @@
 
 1. Display timeline in the same interface as the main app
     - Since it is not just go to another page in a new tab, no more getting course id from URL using ```window.location.href```, but the current active course object can be retrieved by ```import {ContextStore} from '../../../container/designContainer'```. You will also need to ```import React from 'react'``` and call the ```React.useContext()``` method; This way of accessing app data is widly use in most of the components so you can just study the code, e.g. ```resources/js/design/lesson/container/lessonPlanContainer.jsx```
-    - Once user click on the Timeline on the left menu, it display on the right hand side, i.e. display the ```<TimelineContainer />```
+      - For example, ```getCourseInfo()``` in ```api.js``` will need to be changed
+    - Once user click on the Timeline on the left menu, it display on the right hand side, i.e. display the ```<TimelineContainer />```. This is explained in another page [here](https://ldsstem.github.io/ldsstemdoc/#/tbf/addfeature).
     - All UI postions and CSS style should be normal, and the Timeline should display properly on the right space like all other features, e.g. won't wrap under the left menu, won't display something outside of the viewport
+    - If there is any special feature that rely heavily on UI position, e.g. DIV cover certain area with absolute position, it may have problem (e.g. cover the left menu) after putting in the main interface
 2. Check permission of user and display timeline accordingly (currently edit mode or view-only mode).
     - Actually the course object returned by ```GET /course/{id}``` already contain the ```permission``` parameter inside.
     - By importing the main container (```designContainer```), you can also reuse all the global state, date and built-in funtion. Simply by using React hook ```React.useContext()``` in a function, then you can access the ```course``` object with ```permission``` parameter inside.
