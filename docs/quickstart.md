@@ -74,6 +74,13 @@ Run the npm build to apply the latest front code changes.
 
 ```npm run prod``` or ```npm run dev``` for dev build
 
+> If the following error occurred:
+
+> ```Cannot find module 'caniuse-lite/dist/unpacker/agents'```
+
+> Try to run this:
+
+> ```npm update @babel/preset-env ```
 
 ## LDS on the server
 LDS can be served on the NGINX Server.
